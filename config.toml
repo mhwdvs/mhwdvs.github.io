@@ -4,9 +4,7 @@ title = '(m)att(h)e(w) (d)a(v)i(s)'
 theme = 'etch'
 
 [params]
-    copyright = '''
-    Copyright © 2021 Matthew Davis
-
+    description = '''
     anything (at) mhwdvs.com
 
     -----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -50,3 +48,5 @@ theme = 'etch'
     =1H+8
     -----END PGP PUBLIC KEY BLOCK-----
     '''
+
+    copyright = 'Copyright © 2021 Matthew Davis'
