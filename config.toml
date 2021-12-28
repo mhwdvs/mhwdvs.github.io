@@ -1,10 +1,10 @@
-baseURL = "https://mhwdvs.github.io/"
-languageCode = "en-au"
-title = "(m)att(h)e(w) (d)a(v)i(s)"
-theme = "etch"
+baseURL = 'https://mhwdvs.github.io/'
+languageCode = 'en-au'
+title = '(m)att(h)e(w) (d)a(v)i(s)'
+theme = 'etch'
 
 [params]
-    copyright = """
+    copyright = '''
     Copyright © 2021 Matthew Davis
 
     anything (at) mhwdvs.com
@@ -49,4 +49,4 @@ theme = "etch"
     kdqwSbXXTQkRMr0=
     =1H+8
     -----END PGP PUBLIC KEY BLOCK-----
-    """
+    '''
