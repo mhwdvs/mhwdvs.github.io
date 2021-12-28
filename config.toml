@@ -7,3 +7,9 @@ theme = 'etch'
     description = 'Yet another blog'
 
     copyright = 'Copyright © 2021 Matthew Davis'
+
+# tell markdown renderer rawhtml tags are ok
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
