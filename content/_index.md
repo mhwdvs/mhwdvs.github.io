@@ -6,6 +6,7 @@ Welcome!
 
 Contact: anything (at) mhwdvs.com
 
+{{< rawhtml >}}
 <details>
     <summary>PGP PUBLIC KEY</summary>
     <ul>
@@ -53,3 +54,5 @@ Contact: anything (at) mhwdvs.com
         </li>
     </ul>
 </details>
+{{< /rawhtml >}}
+
