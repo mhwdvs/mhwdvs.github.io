@@ -8,7 +8,7 @@ Contact: anything (at) mhwdvs.com
 
 {{< rawhtml >}}
 <details>
-    <summary>PGP PUBLIC KEY</summary>
+    <summary>Reveal PGP Public Key:</summary>
     <pre><code>
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 mQGNBF+Vr5sBDADBXLzTDfUv1l8DHXriHQGjlHusP5H1wWAAMSUxcfktO1jmdEfq
