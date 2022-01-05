@@ -1,5 +1,5 @@
 ---
-title: Using git-crypt - mhwdvs
+title: Using git-crypt
 author: "Matthew Davis"
 date: "2022-01-05"
 description: "git-crypt is a simple tool for encrypting files in a git repository"
