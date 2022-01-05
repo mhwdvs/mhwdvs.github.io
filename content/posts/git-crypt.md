@@ -5,14 +5,16 @@ date: "2022-01-05"
 description: "git-crypt is a simple tool for encrypting files in a git repository"
 ---
 
-`git-crypt` is a simple tool for encrypting files in a git repository
+`git-crypt` is a simple tool for encrypting files in a git repository. It's good for both text and binary files, and ideal for public repositories, protecting files that are both sensible to source control (ie. that shouldn't be in your `.gitignore`), but contain sensitive info you might not want public. My first use case is for my Nix/NixOS/home-manager configuration ([https://github.com/mhwdvs/hm/]()), where I need to add some sensitive configuration details for work, but still want to source control my changes and conveniently access the configuration across multiple machines.
 
-## I don't have a key yet
+Let's get started.
+
+## I haven't used git-crypt before and don't have a key yet, or I want a new key for every repository I use `git-crypt` in
 
 - `git-crypt init`
 - `git-crypt export-key ./git-crypt-key` (will output file `git-crypt-key`, your symmetric key)
 
-## I already have a key/sharing a key across multiple repositories
+## I already have a key from git-crypt and I want to use it for another repository
 
 - Commit at least one file to the repository (not one that should be encrypted). A good first file may be a `README.md` or `.gitignore`
 - `git-crypt init`
