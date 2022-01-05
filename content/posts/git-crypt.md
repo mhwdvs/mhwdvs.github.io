@@ -32,7 +32,7 @@ Commit this file to your git repository.
 
 ## Add your secret files
 
-Do what the heading says.
+What the heading says.
 
 `git-crypt status` will tell you what files it is managing. Note that you don't have to commit secret files to your repository for them to show as "encrypted" in this dialog, so you have the opportunity to check that everything is working as intended before committing your secrets and potentially having them be pushed out into the public.
 
