@@ -13,7 +13,7 @@ theme = 'etch'
     identifier = "posts"
     name = "posts"
     title = "posts"
-    url = "/"
+    url = "/posts"
     weight = 10
 
 [permalinks]
