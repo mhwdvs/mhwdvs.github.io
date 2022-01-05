@@ -23,13 +23,14 @@
 <div>
 <time>January 5, 2022</time>
 </div>
-</header><p><code>git-crypt</code> is a simple tool for encrypting files in a git repository</p>
-<h2 id=i-dont-have-a-key-yet>I don&rsquo;t have a key yet</h2>
+</header><p><code>git-crypt</code> is a simple tool for encrypting files in a git repository. It&rsquo;s good for both text and binary files, and ideal for public repositories, protecting files that are both sensible to source control (ie. that shouldn&rsquo;t be in your <code>.gitignore</code>), but contain sensitive info you might not want public. My first use case is for my Nix/NixOS/home-manager configuration (<a href>https://github.com/mhwdvs/hm/</a>), where I need to add some sensitive configuration details for work, but still want to source control my changes and conveniently access the configuration across multiple machines.</p>
+<p>Let&rsquo;s get started.</p>
+<h2 id=i-havent-used-git-crypt-before-and-dont-have-a-key-yet-or-i-want-a-new-key-for-every-repository-i-use-git-crypt-in>I haven&rsquo;t used git-crypt before and don&rsquo;t have a key yet, or I want a new key for every repository I use <code>git-crypt</code> in</h2>
 <ul>
 <li><code>git-crypt init</code></li>
 <li><code>git-crypt export-key ./git-crypt-key</code> (will output file <code>git-crypt-key</code>, your symmetric key)</li>
 </ul>
-<h2 id=i-already-have-a-keysharing-a-key-across-multiple-repositories>I already have a key/sharing a key across multiple repositories</h2>
+<h2 id=i-already-have-a-key-from-git-crypt-and-i-want-to-use-it-for-another-repository>I already have a key from git-crypt and I want to use it for another repository</h2>
 <ul>
 <li>Commit at least one file to the repository (not one that should be encrypted). A good first file may be a <code>README.md</code> or <code>.gitignore</code></li>
 <li><code>git-crypt init</code></li>
