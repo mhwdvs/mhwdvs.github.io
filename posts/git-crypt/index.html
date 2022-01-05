@@ -1,0 +1,47 @@
+<!doctype html><html><head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Yet another blog">
+<link rel="shortcut icon" href=https://mhwdvs.github.io/favicon.ico>
+<link rel=stylesheet href=/css/style.min.css>
+<title>Home - mhwdvs</title>
+</head>
+<body><header id=banner>
+<h2><a href=https://mhwdvs.github.io/>(m)att(h)e(w) (d)a(v)i(s)</a></h2>
+<nav>
+<ul>
+</ul>
+</nav>
+</header>
+<main id=content>
+<article>
+<header id=post-header>
+<h1>Home - mhwdvs</h1>
+<div></div>
+</header><h1 id=using-git-crypt>Using <code>git-crypt</code></h1>
+<p><code>git-crypt</code> is a simple tool for encrypting files in a git repository</p>
+<h2 id=i-dont-have-a-key-yet>I don&rsquo;t have a key yet</h2>
+<ul>
+<li><code>git-crypt init</code></li>
+<li><code>git-crypt export-key ./git-crypt-key</code> (will output file <code>git-crypt-key</code>, your symmetric key)</li>
+</ul>
+<h2 id=i-already-have-a-keysharing-a-key-across-multiple-repositories>I already have a key/sharing a key across multiple repositories</h2>
+<ul>
+<li>Commit at least one file to the repository (not one that should be encrypted). A good first file may be a <code>README.md</code> or <code>.gitignore</code></li>
+<li><code>git-crypt init</code></li>
+<li><code>git-crypt decrypt &lt;common PGP key file></code></li>
+</ul>
+<h2 id=createappend-gitattributes>Create/Append <code>.gitattributes</code></h2>
+<p>This is where we add rules that tell git-crypt what files it should encrypted</p>
+<pre tabindex=0><code>&lt;file name&gt; filter=git-crypt diff=git-crypt
+</code></pre><p>The file name can be a literal file name, or utilise wildcards (<code>*</code>) to target many files (eg. <code>*.key</code> to encrypt all files ending in <code>.key</code>), or use any other logic git supports in it&rsquo;s <code>.gitattributes</code>.</p>
+<p>Commit this file to your git repository.</p>
+<h2 id=add-your-secret-files>Add your secret files</h2>
+<p>Do what the heading says.</p>
+<p><code>git-crypt status</code> will tell you what files it is managing. Note that you don&rsquo;t have to commit secret files to your repository for them to show as &ldquo;encrypted&rdquo; in this dialog, so you have the opportunity to check that everything is working as intended before committing your secrets and potentially having them be pushed out into the public.</p>
+</article>
+</main><footer id=footer>
+Copyright © 2021 Matthew Davis
+</footer>
+</body>
+</html>
