@@ -36,7 +36,7 @@
 <li><code>git-crypt decrypt &lt;common PGP key file></code></li>
 </ul>
 <h2 id=createappend-gitattributes>Create/Append <code>.gitattributes</code></h2>
-<p>This is where we add rules that tell git-crypt what files it should encrypted</p>
+<p>This is where we add rules that tell git-crypt what files it should encrypt. <code>.gitattributes</code> should be created at the root of your git repository if it doesn&rsquo;t already exist. The lines you add to it for <code>git-crypt</code> should look something like this;</p>
 <pre tabindex=0><code>&lt;file name&gt; filter=git-crypt diff=git-crypt
 </code></pre><p>The file name can be a literal file name, or utilise wildcards (<code>*</code>) to target many files (eg. <code>*.key</code> to encrypt all files ending in <code>.key</code>), or use any other logic git supports in it&rsquo;s <code>.gitattributes</code>.</p>
 <p>Commit this file to your git repository.</p>
