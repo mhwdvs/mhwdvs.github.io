@@ -16,5 +16,5 @@
 &lt;/code>&lt;/pre>&lt;p>The file name can be a literal file name, or utilise wildcards (&lt;code>*&lt;/code>) to target many files (eg. &lt;code>*.key&lt;/code> to encrypt all files ending in &lt;code>.key&lt;/code>), or use any other logic git supports in it&amp;rsquo;s &lt;code>.gitattributes&lt;/code>.&lt;/p>
 &lt;p>Commit this file to your git repository.&lt;/p>
 &lt;h2 id="add-your-secret-files">Add your secret files&lt;/h2>
-&lt;p>Do what the heading says.&lt;/p>
+&lt;p>What the heading says.&lt;/p>
 &lt;p>&lt;code>git-crypt status&lt;/code> will tell you what files it is managing. Note that you don&amp;rsquo;t have to commit secret files to your repository for them to show as &amp;ldquo;encrypted&amp;rdquo; in this dialog, so you have the opportunity to check that everything is working as intended before committing your secrets and potentially having them be pushed out into the public.&lt;/p></description></item></channel></rss>
