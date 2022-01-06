@@ -11,6 +11,8 @@
 &lt;li>&lt;code>git-crypt init&lt;/code>&lt;/li>
 &lt;li>&lt;code>git-crypt decrypt &amp;lt;common PGP key file&amp;gt;&lt;/code>&lt;/li>
 &lt;/ul>
+&lt;h2 id="add-your-key-file-to-your-repositories-gitignore">Add your key file to your repositories' &lt;code>.gitignore&lt;/code>&lt;/h2>
+&lt;p>It&amp;rsquo;s vital that you &lt;strong>don&amp;rsquo;t&lt;/strong> commit your key file to your repository. Append the name of your key file to your repositories &lt;code>.gitignore&lt;/code> so that git ignores it.&lt;/p>
 &lt;h2 id="createappend-gitattributes">Create/Append &lt;code>.gitattributes&lt;/code>&lt;/h2>
 &lt;p>This is where we add rules that tell git-crypt what files it should encrypt. &lt;code>.gitattributes&lt;/code> should be created at the root of your git repository if it doesn&amp;rsquo;t already exist. The lines you add to it for &lt;code>git-crypt&lt;/code> should look something like this;&lt;/p>
 &lt;pre tabindex="0">&lt;code>&amp;lt;file name&amp;gt; filter=git-crypt diff=git-crypt
