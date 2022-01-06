@@ -20,6 +20,10 @@ Let's get started.
 - `git-crypt init`
 - `git-crypt decrypt <common PGP key file>`
 
+## Add your key file to your repositories' `.gitignore`
+
+It's vital that you **don't** commit your key file to your repository. Append the name of your key file to your repositories `.gitignore` so that git ignores it.
+
 ## Create/Append `.gitattributes`
 
 This is where we add rules that tell git-crypt what files it should encrypt. `.gitattributes` should be created at the root of your git repository if it doesn't already exist. The lines you add to it for `git-crypt` should look something like this;
