@@ -1,4 +1,99 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Categories on (m)att(h)e(w) (d)a(v)i(s)</title><link>https://mhwdvs.github.io/categories/</link><description>Recent content in Categories on (m)att(h)e(w) (d)a(v)i(s)</description><generator>Hugo -- gohugo.io</generator><language>en-au</language><atom:link href="https://mhwdvs.github.io/categories/index.xml" rel="self" type="application/rss+xml"/><item><title>Using git-crypt</title><link>https://mhwdvs.github.io/using-git-crypt/</link><pubDate>Wed, 05 Jan 2022 00:00:00 +0000</pubDate><guid>https://mhwdvs.github.io/using-git-crypt/</guid><description>&lt;p>&lt;code>git-crypt&lt;/code> is a simple tool for encrypting files in a git repository. It&amp;rsquo;s good for both text and binary files, and ideal for public repositories, protecting files that are both sensible to source control (ie. that shouldn&amp;rsquo;t be in your &lt;code>.gitignore&lt;/code>), but contain sensitive info you might not want public. My first use case is for my Nix/NixOS/home-manager configuration (&lt;a href="">https://github.com/mhwdvs/hm/&lt;/a>), where I need to add some sensitive configuration details for work, but still want to source control my changes and conveniently access the configuration across multiple machines.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Categories on (m)att(h)e(w) (d)a(v)i(s)</title><link>https://mhwdvs.github.io/categories/</link><description>Recent content in Categories on (m)att(h)e(w) (d)a(v)i(s)</description><generator>Hugo -- gohugo.io</generator><language>en-au</language><atom:link href="https://mhwdvs.github.io/categories/index.xml" rel="self" type="application/rss+xml"/><item><title>Ergodox build log</title><link>https://mhwdvs.github.io/ergodox-build-log/</link><pubDate>Tue, 05 Jul 2022 00:00:00 +0000</pubDate><guid>https://mhwdvs.github.io/ergodox-build-log/</guid><description>&lt;p>Welcome!&lt;/p>
+&lt;p>A while ago I decided I wanted to give an ergonomic keyboard a try. Something more ergonomic than the Microsoft Sculpt (🤢) I&amp;rsquo;ve tried previously.&lt;/p>
+&lt;p>&lt;img src="sculpt.jpg" alt="Stock image of a Microsoft Sculpt 7000 keyboard. Originally sourced from https://www.skroutz.gr/s/66731/Microsoft-Natural-Ergonomic-7000-ENG.html">&lt;/p>
+&lt;p>My search criteria were:&lt;/p>
+&lt;ul>
+&lt;li>Split&lt;/li>
+&lt;li>Ortholinear&lt;/li>
+&lt;li>As many keys as possible&lt;/li>
+&lt;li>Budget&lt;/li>
+&lt;/ul>
+&lt;p>I eventually settled on building an &lt;a href="https://www.ergodox.io/">Ergodox&lt;/a> from scratch, mainly due to the high prices of pre-built options such as the Ergodox-EZ and Moonlander, and kits generally on-par or lacking in features by comparison. It&amp;rsquo;s probably the most popular DIY ergonomic keyboard out there too, so I felt somewhat assured knowing that this was a tried-and-tested build.&lt;/p>
+&lt;p>I started the build December 2021, and it&amp;rsquo;s finally done. Some details of the build follows&amp;hellip;&lt;/p>
+&lt;p>&lt;a href="#conclusion">(skip to the conclusion see the final result)&lt;/a>&lt;/p>
+&lt;hr>
+&lt;h2 id="pcb">PCB&lt;/h2>
+&lt;p>I used the official &lt;a href="https://github.com/Ergodox-io/ErgoDox">Ergodox PCB files&lt;/a>, making some slight tweaks to the silkscreen for fun in &lt;a href="https://www.freecadweb.org/">FreeCAD&lt;/a>.&lt;/p>
+&lt;p>From there, I determined that with their introductory offers, &lt;a href="https://jlcpcb.com/">JLCPCB&lt;/a> was the cheapest option, so it was just a matter of;&lt;/p>
+&lt;ul>
+&lt;li>uploading the Gerber PCB files,&lt;/li>
+&lt;li>selecting PCB and silk screen colours,&lt;/li>
+&lt;li>and leaving the minutia parameters to their defaults,&lt;/li>
+&lt;/ul>
+&lt;p>Their MOQ is 5 units, but since the Ergodox PCB design is reversible I only ended up with 3 spare boards to one day line my pool room.&lt;/p>
+&lt;p>&lt;img src="pcbpreview.png" alt="A preview render of the Ergodox PCB">&lt;/p>
+&lt;p>&lt;img src="pcborder.png" alt="Order overview of the Ergodox PCB">&lt;/p>
+&lt;p>My only gripe design-wise is the external USB Mini-B port. I have no qualms with USB2 bandwidth for a keyboard, and I understand the Teensy inside uses Mini-B, but the connector sucks (maybe only topped by Micro-B) - it&amp;rsquo;s not reversible and its uncommon, so finding a nice cable that wasn&amp;rsquo;t destined for use with a Motorola RAZR is challenging.&lt;/p>
+&lt;p>If it were me it would be Type-C facing outward, but alas I&amp;rsquo;m no electrical engineer so here we are.&lt;/p>
+&lt;h2 id="electronics">Electronics&lt;/h2>
+&lt;p>Everything I needed to assemble the PCB&amp;rsquo;s was listed on the &lt;a href="https://www.ergodox.io/#electronics">official bill of materials&lt;/a>. I ordered all of the through-hole components from DigiKey (you can order the same with &lt;a href="http://www.digikey.com.au/short/5c552wfh">this link&lt;/a>), the Teensy from the &lt;a href="https://www.pjrc.com/teensy/">manufacturers website&lt;/a>, and the 3.5mm and Mini-B cables from Aliexpress.&lt;/p>
+&lt;p>&lt;img src="componentorder.png" alt="">&lt;/p>
+&lt;h2 id="switches">Switches&lt;/h2>
+&lt;p>Akko &amp;ldquo;Lavender Purple&amp;rdquo; (45g, tactile). Very affordable for what they are. The only thing I noticed is some &amp;rsquo;temporary&amp;rsquo; spring ping they have. It was pretty bad on the first day, however by day 2-3 it went into remission. I didn&amp;rsquo;t have the same experience with their &amp;ldquo;Antique White&amp;rdquo; linear switches.&lt;/p>
+&lt;p>&lt;img src="switches.jpg" alt="">&lt;/p>
+&lt;p>Also, I originally planned on using some Durock stabilisers for the 2U thumb-cluster keys, but the slots in the case plate were not wide enough to support them. They feel fine without stabilizers.&lt;/p>
+&lt;h2 id="keycaps">Keycaps&lt;/h2>
+&lt;p>Printed keycaps are actually quite challenging to find for the Ergodox due the unusually large number of 2U and 1.5U required, which should ideally be blank, while printed alphanumeric keys are desirable.&lt;/p>
+&lt;p>I found some YDMK PBT, dye-sublimated, ZDA-profile keycaps from &lt;a href="https://www.aliexpress.com/item/1005002723119555.html">Aliexpress&lt;/a>. I use another set from YDMK for my GMMK Pro, I think they are really great value compared to popular GMK sets.&lt;/p>
+&lt;h2 id="case">Case&lt;/h2>
+&lt;p>At first my plan was to get the &lt;a href="https://github.com/Ergodox-io/ErgoDox/tree/master/ErgoDox%20Acrylic%20Case/ErgoDOX%20Acrylic%20Case%20-%20Designed%20by%20Litster/Standard">original layered-acrylic case&lt;/a> manufactured, however I quickly discovered that with so many pieces (12), the price to get all of the acrylic laser cut was approaching $150AUD, which put it into &lt;a href="https://falba.tech/product-category/keyboard-parts/ergodox-parts/cases-ergodox/">wood case range&lt;/a>, well out of my budget.&lt;/p>
+&lt;p>Instead, I opted to utilise my university&amp;rsquo;s free 3D printing service and a &lt;a href="https://www.thingiverse.com/thing:4078254/files">slightly modified case design&lt;/a> more suited to FDM, reducing the total number of pieces from 12 to 6.&lt;/p>
+&lt;p>To finish the pieces I sanded from 120 grit down to 1200 grit. After this I found the pieces would dry with like a white scum on the surface, so I coated the pieces in some plastic-bonding satin-finish clear coat, which I think gave a very nice-to-touch finish.&lt;/p>
+&lt;p>&lt;img src="casepaintdry.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="casetopfinished.jpg" alt="">&lt;/p>
+&lt;p>It came out well with a bit of coercion. My only regret is not opting for 100% infill. When finishing the print (fixing up the print imperfections), I was limited by how much I could sand down the surfaces because I was sanding into the print infill, meaning no matter how much further I sanded there would always be new gaps opening in the surface, which left an imperfect finish on some surfaces. Thankfully the top surfaces came out the best so I&amp;rsquo;m not super disappointed.&lt;/p>
+&lt;p>&lt;img src="infill.jpg" alt="">&lt;/p>
+&lt;p>To secure the case together, the case designer intended for screws to thread into the plastic base. For a more secure fastening method I drilled some holes through the bases and melted some nuts into the back. This allowed me to torque down on the case without fear of stripping some plastic threads.&lt;/p>
+&lt;p>&lt;img src="nutbolt.jpg" alt="">&lt;/p>
+&lt;p>To take advantage of this compression capability, I used some thin foam between the plate and PCB, as well as on the base, to help dampen and disperse vibrations evenly throughout the case, which I think helped give the keys a tolerable sound and feel.&lt;/p>
+&lt;p>&lt;img src="pcbfoam.jpg" alt="">&lt;/p>
+&lt;p>Finally, to give the case some grip I added some adhesive rubber furniture feet to the base. I bought a bunch and determined that these hit the Goldilocks zone of firmness, grip and height, although it does make the keyboard pretty uncomfortable for me to use without a tall wristrest.&lt;/p>
+&lt;p>&lt;img src="feet_0_o.jpg" alt="">&lt;/p>
+&lt;h2 id="firmware">Firmware&lt;/h2>
+&lt;p>Initially, I used QMK but found it to be quite involved. After some further research I discovered that the open source Ergodox is actually electrically compatible with the original &lt;a href="https://ergodox-ez.com">Ergodox-EZ from ZSA&lt;/a>, so I can actually take advantage of their very nice web-based &lt;a href="http://configure.ergodox-ez.com/keyboard_layouts/new">configurator&lt;/a>. It&amp;rsquo;s very convenient since there&amp;rsquo;s no software to install, and it&amp;rsquo;s provides a polished user experience. Maybe the only caveat is that it only works in Chrome, although I can excuse it as I believe it&amp;rsquo;s doing some pretty cutting-edge/non-standardized stuff to get direct access to a USB device from the browser. I&amp;rsquo;d even say it&amp;rsquo;s better than anything I&amp;rsquo;ve used in the past from Razer, Corsair etc.&lt;/p>
+&lt;h2 id="usage">Usage&lt;/h2>
+&lt;p>I&amp;rsquo;ve rapidly gone through layout variations in the few days since I assembled the keyboard. I&amp;rsquo;m currently at &lt;a href="https://configure.zsa.io/ergodox-ez/layouts/wyq3D/latest/0">v21.0&lt;/a>.&lt;/p>
+&lt;p>My first day was rough, but I&amp;rsquo;ve been picking up pace surprisingly quickly, although with more errors than I would like.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Days using keyboard&lt;/th>
+&lt;th>Best typing speed (wpm)&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Day 1&lt;/td>
+&lt;td>13&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Day 2&lt;/td>
+&lt;td>28&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Day 3&lt;/td>
+&lt;td>47&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Day 4&lt;/td>
+&lt;td>59&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Day 5&lt;/td>
+&lt;td>53&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>For context, on a regular QWERTY keyboard I typically type at 80-100wpm.&lt;/p>
+&lt;p>The factors that I find make this switch the most jarring are the ortholinear layout and locations of special keys. I didn&amp;rsquo;t like having &lt;code>Backspace&lt;/code> or &lt;code>Enter&lt;/code> on my thumbs because I misclicked them too frequently, but even after I relinquished them to my right index finger I still find myself accidentally pressing them (eg. pressing &lt;code>Enter&lt;/code> when going to press &lt;code>H&lt;/code>)&lt;/p>
+&lt;p>Surprisingly, I feel most comfortable with the keys perpendicular to me rather than slightly angled out, which I imagined would be more natural. I suspect it&amp;rsquo;s because it&amp;rsquo;s what&amp;rsquo;s most familiar to me.&lt;/p>
+&lt;p>I&amp;rsquo;m definitely in need of some wrist rests. With some tall rubber feet installed, the Ergodox towers over my wrists which makes extended typing sessions uncomfortable.&lt;/p>
+&lt;h2 id="conclusion">Conclusion&lt;/h2>
+&lt;p>Aaand here&amp;rsquo;s the finished product!&lt;/p>
+&lt;p>&lt;img src="final.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="finalclose.jpg" alt="">&lt;/p>
+&lt;p>This was a really fun project for me. Production was definietely drawn out due to motivation (sanding is exhausting) but made for great anticipation of completion. I think the end product offers reasonable value in comparison to commercial DIY or pre-options, but it&amp;rsquo;s not without it&amp;rsquo;s flaws.&lt;/p>
+&lt;p>I&amp;rsquo;d recommend this project to others if you are interested in trying the layout and don&amp;rsquo;t want to fork out ~$500AUD for a Moonlander. Be warned, there is still a significant learning curve ahead, which I found unexpected because I haven&amp;rsquo;t deviated from QWERTY. I still find myself returning to my more traditional GMMK Pro, which by contrast gives me joy to type on without any muscle-memory investment.&lt;/p></description></item><item><title>Using git-crypt</title><link>https://mhwdvs.github.io/using-git-crypt/</link><pubDate>Wed, 05 Jan 2022 00:00:00 +0000</pubDate><guid>https://mhwdvs.github.io/using-git-crypt/</guid><description>&lt;p>&lt;code>git-crypt&lt;/code> is a simple tool for encrypting files in a git repository. It&amp;rsquo;s good for both text and binary files, and ideal for public repositories, protecting files that are both sensible to source control (ie. that shouldn&amp;rsquo;t be in your &lt;code>.gitignore&lt;/code>), but contain sensitive info you might not want public. My first use case is for my Nix/NixOS/home-manager configuration (&lt;a href="">https://github.com/mhwdvs/hm/&lt;/a>), where I need to add some sensitive configuration details for work, but still want to source control my changes and conveniently access the configuration across multiple machines.&lt;/p>
 &lt;p>Let&amp;rsquo;s get started.&lt;/p>
 &lt;h2 id="i-havent-used-git-crypt-before-and-dont-have-a-key-yet-or-i-want-a-new-key-for-every-repository-i-use-git-crypt-in">I haven&amp;rsquo;t used git-crypt before and don&amp;rsquo;t have a key yet, or I want a new key for every repository I use &lt;code>git-crypt&lt;/code> in&lt;/h2>
 &lt;ul>
