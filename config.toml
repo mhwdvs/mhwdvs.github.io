@@ -4,9 +4,8 @@ title = '(m)att(h)e(w) (d)a(v)i(s)'
 theme = 'etch'
 
 [params]
-    description = 'Yet another tech blog'
-
-    copyright = 'Copyright © 2021 Matthew Davis'
+    description = 'Tech blog, home of mhwdvs (whatever that is)'
+    copyright = '© Matthew Davis 2022'
 
 [menu]
   [[menu.main]]
