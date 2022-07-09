@@ -4,11 +4,16 @@ title: Home - mhwdvs
 
 Welcome!
 
-Contact: anything (at) mhwdvs.com
+---
+
+[Github](https://github.com/mhwdvs)
+
+Contact: public@mhwdvs.com
 
 {{< rawhtml >}}
+
 <details>
-    <summary>Reveal PGP Public Key:</summary>
+    <summary>PGP Public Key:</summary>
     <pre><code>
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 mQGNBF+Vr5sBDADBXLzTDfUv1l8DHXriHQGjlHusP5H1wWAAMSUxcfktO1jmdEfq
@@ -54,3 +59,4 @@ kdqwSbXXTQkRMr0=
 </details>
 {{< /rawhtml >}}
 
+---
