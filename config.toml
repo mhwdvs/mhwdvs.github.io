@@ -1,0 +1,25 @@
+baseURL = 'https://mhwdvs.github.io/'
+languageCode = 'en-au'
+title = '(m)att(h)e(w) (d)a(v)i(s)'
+theme = 'etch'
+
+[params]
+    description = 'Tech blog, home of mhwdvs (whatever that is)'
+    copyright = '© Matthew Davis 2022'
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "posts"
+    title = "posts"
+    url = "/posts"
+    weight = 10
+
+[permalinks]
+  posts = "/:title/"
+
+# tell markdown renderer rawhtml tags are ok
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
