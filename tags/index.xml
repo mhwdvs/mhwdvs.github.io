@@ -1,4 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tags on (m)att(h)e(w) (d)a(v)i(s)</title><link>https://mhwdvs.com/tags/</link><description>Recent content in Tags on (m)att(h)e(w) (d)a(v)i(s)</description><generator>Hugo -- gohugo.io</generator><language>en-au</language><atom:link href="https://mhwdvs.com/tags/index.xml" rel="self" type="application/rss+xml"/><item><title>ICT371 - PROTOCOL: Protease</title><link>https://mhwdvs.com/posts/uniprojects/ict371/</link><pubDate>Mon, 05 Jun 2023 00:00:00 +0000</pubDate><guid>https://mhwdvs.com/posts/uniprojects/ict371/</guid><description>&lt;p>&lt;a href="https://mhwdvs.com/posts/uniprojects/ict371/webgl/">Demo&lt;/a>&lt;/p></description></item><item><title>Ergodox build log</title><link>https://mhwdvs.com/posts/ergodox/</link><pubDate>Tue, 05 Jul 2022 00:00:00 +0000</pubDate><guid>https://mhwdvs.com/posts/ergodox/</guid><description>&lt;p>Welcome!&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tags on (m)att(h)e(w) (d)a(v)i(s)</title><link>https://mhwdvs.com/tags/</link><description>Recent content in Tags on (m)att(h)e(w) (d)a(v)i(s)</description><generator>Hugo -- gohugo.io</generator><language>en-au</language><atom:link href="https://mhwdvs.com/tags/index.xml" rel="self" type="application/rss+xml"/><item><title>ICT371 - PROTOCOL: Protease</title><link>https://mhwdvs.com/posts/uniprojects/ict371/</link><pubDate>Mon, 05 Jun 2023 00:00:00 +0000</pubDate><guid>https://mhwdvs.com/posts/uniprojects/ict371/</guid><description>&lt;p>&lt;img src="screens/game.png" alt="">&lt;/p>
+&lt;p>Developed in Semester 1 2023, this serious game project aims to teach players about how the SARS-CoV2 antiviral medication PAXLOVID works, the difference between an antiviral and a vaccine, and the importance of both vaccination and antiviral medication for immunocompromised individuals.&lt;/p>
+&lt;p>The game was developed for PC and Meta Quest 2, and has also been ported to WebGL.&lt;/p>
+&lt;h2 id="trailer">Trailer&lt;/h2>
+&lt;p>&lt;a href="https://drive.google.com/file/d/1rAA1CpYQrsrCQEWrfFegerZIDHhdGlJB/view?usp=share_link">Google Drive Link&lt;/a>&lt;/p>
+&lt;h2 id="demo">Demo&lt;/h2>
+&lt;p>&lt;a href="https://mhwdvs.com/posts/uniprojects/ict371/webgl/">WebGL Demo Link&lt;/a>&lt;/p>
+&lt;p>&lt;strong>Note:&lt;/strong> demo compatible with PC (non-vr) ONLY, pending &lt;a href="https://github.com/De-Panther/unity-webxr-export/issues/95">Unity adding WebGL support to the XR Interaction Toolkit&lt;/a>!&lt;/p>
+&lt;h2 id="screens">Screens&lt;/h2>
+&lt;p>&lt;img src="screens/mainmenu.png" alt="asd">&lt;/p>
+&lt;p>&lt;img src="screens/tutorial.png" alt="">&lt;/p>
+&lt;p>&lt;img src="screens/patientselect.png" alt="">&lt;/p>
+&lt;p>&lt;img src="screens/intro.png" alt="">&lt;/p></description></item><item><title>Ergodox build log</title><link>https://mhwdvs.com/posts/ergodox/</link><pubDate>Tue, 05 Jul 2022 00:00:00 +0000</pubDate><guid>https://mhwdvs.com/posts/ergodox/</guid><description>&lt;p>Welcome!&lt;/p>
 &lt;p>A while ago I decided I wanted to give an ergonomic keyboard a try. Something more ergonomic than the Microsoft Sculpt (🤢) I&amp;rsquo;ve tried previously.&lt;/p>
 &lt;p>&lt;img src="sculpt.jpg" alt="Stock image of a Microsoft Sculpt 7000 keyboard. Originally sourced from https://www.skroutz.gr/s/66731/Microsoft-Natural-Ergonomic-7000-ENG.html">&lt;/p>
 &lt;p>My search criteria were:&lt;/p>
