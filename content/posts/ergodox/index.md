@@ -3,6 +3,7 @@ title: Ergodox build log
 author: "Matthew Davis"
 date: "2022-07-05"
 description: "I log my experiences building an Ergodox: an open-source, split, ortholinear mechanical keyboard"
+aliases: ["ergodox-build-log"]
 ---
 
 Welcome!

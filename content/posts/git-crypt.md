@@ -3,6 +3,7 @@ title: Using git-crypt
 author: "Matthew Davis"
 date: "2022-01-05"
 description: "git-crypt is a simple tool for encrypting files in a git repository"
+aliases: ["using-git-crypt"]
 ---
 
 `git-crypt` is a simple tool for encrypting files in a git repository. It's good for both text and binary files, and ideal for public repositories, protecting files that are both sensible to source control (ie. that shouldn't be in your `.gitignore`), but contain sensitive info you might not want public. My first use case is for my Nix/NixOS/home-manager configuration ([https://github.com/mhwdvs/hm/]()), where I need to add some sensitive configuration details for work, but still want to source control my changes and conveniently access the configuration across multiple machines.
@@ -41,4 +42,3 @@ Commit this file to your git repository.
 What the heading says.
 
 `git-crypt status` will tell you what files it is managing. Note that you don't have to commit secret files to your repository for them to show as "encrypted" in this dialog, so you have the opportunity to check that everything is working as intended before committing your secrets and potentially having them be pushed out into the public.
-

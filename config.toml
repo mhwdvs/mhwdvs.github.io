@@ -4,8 +4,8 @@ title = '(m)att(h)e(w) (d)a(v)i(s)'
 theme = 'etch'
 
 [params]
-    description = 'Tech blog, home of mhwdvs (whatever that is)'
-    copyright = '© Matthew Davis 2022'
+    description = 'Blog of Matthew Davis'
+    copyright = '© Matthew Davis 2023'
 
 [menu]
   [[menu.main]]
@@ -14,9 +14,6 @@ theme = 'etch'
     title = "posts"
     url = "/posts"
     weight = 10
-
-[permalinks]
-  posts = "/:title/"
 
 # tell markdown renderer rawhtml tags are ok
 [markup]
